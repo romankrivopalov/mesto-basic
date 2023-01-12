@@ -120,6 +120,10 @@ editProfileBtn.addEventListener('click', () => {
   inputName.value = profileTitle.textContent;
   inputSignature.value = profileSubtitle.textContent;
 
+  inputEditFormList.forEach(inputElement => {
+    hideInputError(formEditProfile, inputElement, formSetting.inputErrorClass, formSetting.errorClass)
+  })
+
   openPopup(profilePopup);
 });
 
